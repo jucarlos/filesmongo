@@ -1,0 +1,24 @@
+{
+  "name": "filesenmongo",
+  "version": "1.0.0",
+  "description": "Guardar Ficheros en Mongo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Juan Carlos",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "mongoose-unique-validator": "^2.0.3",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "mongoose": "^5.9.5",
+    "nodemon": "^2.0.2"
+  }
+}
