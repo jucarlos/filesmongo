@@ -23,6 +23,27 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 
+app.get('/', ( req, res ) => {
+
+    Fichero.find( {},'nombre nombrecompleto tamanio')
+    .exec( ( err, ficherosDB ) => {
+
+        if ( err ) {
+            return  res.status(400).json({
+                ok: false,
+                mensaje: 'Error al buscar el fichero',
+                id,
+            });
+        }
+        return res.status(200).json({
+            ok: true,
+            ficheros: ficherosDB
+        });
+
+
+    });
+});
+
 
 app.get('/:id', ( req, res ) => {
 
